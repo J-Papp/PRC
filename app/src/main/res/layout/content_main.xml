@@ -418,7 +418,7 @@
                 android:background="#dcdcdc"
                 android:textAlignment="center"
                 android:maxLength="1"
-                android:text="5"
+
                 android:textSize="20dp" />
             <TextView
                 android:layout_width="wrap_content"
@@ -444,7 +444,7 @@
                 android:background="#dcdcdc"
                 android:maxLength="2"
                 android:textAlignment="center"
-                android:text="55"
+
                 android:textSize="20dp" />
 
             <TextView
@@ -472,7 +472,7 @@
                 android:background="#dcdcdc"
                 android:maxLength="2"
                 android:textAlignment="center"
-                android:text="55"
+
                 android:textSize="20dp" />
 
             <EditText
@@ -491,14 +491,14 @@
                 android:textAlignment="center"
                 android:focusable="true"
                 android:layout_gravity="left"
-                android:text="555.55"
+
                 android:textSize="20dp" />
 
 
         </GridLayout>
 
     </LinearLayout>
----------------------------------------------------------------
+    ---------------------------------------------------------------
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -743,7 +743,7 @@
 
         </GridLayout>
     </LinearLayout>
---------------------------------------------------------------------
+    --------------------------------------------------------------------
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -866,7 +866,7 @@
         </GridLayout>
     </LinearLayout>
 
-----------------------------------------------------------------
+    ----------------------------------------------------------------
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -988,7 +988,7 @@
 
         </GridLayout>
     </LinearLayout>
--------------------------------------------------------------------
+    -------------------------------------------------------------------
 
     <LinearLayout
         android:orientation="vertical"
@@ -1141,7 +1141,7 @@
         android:layout_below="@+id/weeklyText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:text="200.25"
+
         android:textStyle="bold" />
 
     <TextView
@@ -1169,8 +1169,8 @@
         android:layout_below="@+id/dropsText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:text="200.25 / minute"
-         />
+
+        />
 
     <RelativeLayout
         android:orientation="vertical"
@@ -1194,12 +1194,12 @@
             android:layout_alignParentEnd="false">
 
             <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Load"
-            android:id="@+id/btnLoad"
-            android:onClick="loadInfo"
-            android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Load"
+                android:id="@+id/btnLoad"
+                android:onClick="loadInfo"
+                android:layout_marginLeft="3dp"
 
                 android:layout_weight="1" />
 
@@ -1215,14 +1215,14 @@
                 android:layout_weight="1" />
 
             <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Clear"
-            android:id="@+id/btnClear"
-            android:onClick="clickClear"
-            android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:id="@+id/btnClear"
+                android:onClick="clickClear"
+                android:layout_marginLeft="2dp"
 
-            android:layout_toEndOf="@+id/btnLoad"
+                android:layout_toEndOf="@+id/btnLoad"
                 android:layout_weight="1" />
 
 

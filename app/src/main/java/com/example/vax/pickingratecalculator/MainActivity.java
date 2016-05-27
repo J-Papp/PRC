@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        public void exit(View view){
+    public void exit(View view){
         finish();
         System.exit(0);
     }
@@ -81,10 +81,10 @@ public class MainActivity extends AppCompatActivity {
             else {
                 sec2=Double.parseDouble(s2.getText().toString())/60;
             }
-        day2Time = (Double.parseDouble(logon2.getText().toString()) * 60 + Double.parseDouble(mins2.getText().toString())+sec2) / 60;
-        day2PRate = Double.parseDouble(pick2.getText().toString()) * day2Time;
-        weekTime += day2Time;
-        weekPRate += day2PRate;
+            day2Time = (Double.parseDouble(logon2.getText().toString()) * 60 + Double.parseDouble(mins2.getText().toString())+sec2) / 60;
+            day2PRate = Double.parseDouble(pick2.getText().toString()) * day2Time;
+            weekTime += day2Time;
+            weekPRate += day2PRate;
         }
     }
     public void process3(){
@@ -95,10 +95,10 @@ public class MainActivity extends AppCompatActivity {
             else {
                 sec3=Double.parseDouble(s3.getText().toString())/60;
             }
-        day3Time = (Double.parseDouble(logon3.getText().toString()) * 60 + Double.parseDouble(mins3.getText().toString())+sec3) / 60;
-        day3PRate = Double.parseDouble(pick3.getText().toString()) * day3Time;
-        weekTime += day3Time;
-        weekPRate += day3PRate;
+            day3Time = (Double.parseDouble(logon3.getText().toString()) * 60 + Double.parseDouble(mins3.getText().toString())+sec3) / 60;
+            day3PRate = Double.parseDouble(pick3.getText().toString()) * day3Time;
+            weekTime += day3Time;
+            weekPRate += day3PRate;
         }
     }
     public void process4(){
@@ -109,10 +109,10 @@ public class MainActivity extends AppCompatActivity {
             else {
                 sec4=Double.parseDouble(s4.getText().toString())/60;
             }
-        day4Time = (Double.parseDouble(logon4.getText().toString()) * 60 + Double.parseDouble(mins4.getText().toString())+sec4) / 60;
-        day4PRate = Double.parseDouble(pick4.getText().toString()) * day4Time;
-        weekTime += day4Time;
-        weekPRate += day4PRate;
+            day4Time = (Double.parseDouble(logon4.getText().toString()) * 60 + Double.parseDouble(mins4.getText().toString())+sec4) / 60;
+            day4PRate = Double.parseDouble(pick4.getText().toString()) * day4Time;
+            weekTime += day4Time;
+            weekPRate += day4PRate;
         }
     }
     public void process5(){
@@ -123,10 +123,10 @@ public class MainActivity extends AppCompatActivity {
             else {
                 sec5=Double.parseDouble(s5.getText().toString())/60;
             }
-        day5Time = (Double.parseDouble(logon5.getText().toString()) * 60 + Double.parseDouble(mins5.getText().toString())+sec5) / 60;
-        day5PRate = Double.parseDouble(pick5.getText().toString()) * day5Time;
-        weekTime += day5Time;
-        weekPRate += day5PRate;
+            day5Time = (Double.parseDouble(logon5.getText().toString()) * 60 + Double.parseDouble(mins5.getText().toString())+sec5) / 60;
+            day5PRate = Double.parseDouble(pick5.getText().toString()) * day5Time;
+            weekTime += day5Time;
+            weekPRate += day5PRate;
         }
     }
     public void process6(){
@@ -138,11 +138,11 @@ public class MainActivity extends AppCompatActivity {
             else {
                 sec6=Double.parseDouble(s6.getText().toString())/60;
             }
-        day6Time = (Double.parseDouble(logon6.getText().toString())*60 + Double.parseDouble(mins6.getText().toString())+sec6)/60;
-        day6PRate = Double.parseDouble(pick6.getText().toString())*day6Time;
-        weekTime += day6Time;
-        weekPRate += day6PRate;
-    }
+            day6Time = (Double.parseDouble(logon6.getText().toString())*60 + Double.parseDouble(mins6.getText().toString())+sec6)/60;
+            day6PRate = Double.parseDouble(pick6.getText().toString())*day6Time;
+            weekTime += day6Time;
+            weekPRate += day6PRate;
+        }
     }
 
 
@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             view = getCurrentFocus();
-                if (count != 0) {
+            if (count != 0) {
 
                 if (((EditText) view).getText().length() == 3) {
                     String hour1 = ((EditText) view).getText().toString();
@@ -214,15 +214,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }else{if (((EditText) view).getText().length() == 0) {
-                   try {
-                       view.focusSearch(View.FOCUS_LEFT).requestFocus();
-                       ((EditText) view).setSelection(((EditText) view).getText().length());
-                   } catch (Exception e){
-
-                   }
-                }
+                try {
+                    view.focusSearch(View.FOCUS_LEFT).requestFocus();
+                    ((EditText) view).setSelection(((EditText) view).getText().length());
+                } catch (Exception e){
 
                 }
+            }
+
+            }
 
 
         }
@@ -330,7 +330,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i=0;i<fields.size(); i++ ){
             fields.get(i).setText(sharedPrefs.getString(keys.get(i), ""));
-            }
+        }
         weeklyRate.setText(sharedPrefs.getString("wklRate", ""));
     }
 
@@ -341,8 +341,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPrefs.edit();
         editor.clear();
         for (int i=0;i<fields.size(); i++ ){
-                editor.remove(keys.get(i));
-                editor.putString(keys.get(i), fields.get(i).getText().toString());
+            editor.remove(keys.get(i));
+            editor.putString(keys.get(i), fields.get(i).getText().toString());
         }
 
         editor.putString("wklRate", weeklyRate.getText().toString());
