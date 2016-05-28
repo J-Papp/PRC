@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
@@ -14,6 +15,7 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+
 import android.widget.GridLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -23,14 +25,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
+//Appid: com.example.vax.prcalculator
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText logon1, logon2, logon3, logon4, logon5,logon6,pick1, pick2, pick3, pick4, pick5, pick6,mins1, mins2, mins3, mins4, mins5,mins6;
-    EditText s1, s2,s3, s4, s5, s6, pickb1, pickb2, pickb3, pickb4, pickb5, pickb6;
+    com.example.vax.pickingratecalculator.CustomEditText logon1, logon2, logon3, logon4, logon5,logon6,pick1, pick2, pick3, pick4, pick5, pick6,mins1, mins2, mins3, mins4, mins5,mins6;
+    com.example.vax.pickingratecalculator.CustomEditText s1, s2,s3, s4, s5, s6, pickb1, pickb2, pickb3, pickb4, pickb5, pickb6;
     double sec1, sec2, sec3, sec4, sec5, sec6, pb1, pb2, pb3, pb4, pb5, pb6;
-    ArrayList<EditText> fields = new ArrayList<EditText>();
+    ArrayList<com.example.vax.pickingratecalculator.CustomEditText> fields = new ArrayList<com.example.vax.pickingratecalculator.CustomEditText>();
     String keyArray[]= new String[]{"logH1","logH2","logH3","logH4","logH5","logH6","logM1","logM2","logM3","logM4","logM5","logM6","pck1","pck2","pck3","pck4","pck5","pck6","logS1","logS2","logS3","logS4","logS5","logS6"};
     List<String> keys = Arrays.asList(keyArray);
     View view;
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinner1,spinner2,spinner3,spinner4,spinner5,spinner6;
     ViewGroup group;
     GridLayout gL1, gL2, gL3, gL4, gL5, gL6;
-    boolean del, react;
+
 
 
 
@@ -174,8 +176,8 @@ public class MainActivity extends AppCompatActivity {
     {
         for (int i = 0, count = group.getChildCount(); i < count; ++i) {
             View view = group.getChildAt(i);
-            if (view instanceof EditText) {
-                ((EditText) view).addTextChangedListener(textWatcher);
+            if (view instanceof com.example.vax.pickingratecalculator.CustomEditText) {
+                ((com.example.vax.pickingratecalculator.CustomEditText) view).addTextChangedListener(textWatcher);
             }}
     }
     public TextWatcher textWatcher = new TextWatcher() {
@@ -190,33 +192,33 @@ public class MainActivity extends AppCompatActivity {
             view = getCurrentFocus();
             if (count != 0) {
 
-                if (((EditText) view).getText().length() == 3) {
-                    String hour1 = ((EditText) view).getText().toString();
-                    ((EditText) view).setText(hour1 + ".");
-                    ((EditText) view).setSelection(((EditText) view).getText().length());
+                if (((com.example.vax.pickingratecalculator.CustomEditText) view).getText().length() == 3) {
+                    String hour1 = ((com.example.vax.pickingratecalculator.CustomEditText) view).getText().toString();
+                    ((com.example.vax.pickingratecalculator.CustomEditText) view).setText(hour1 + ".");
+                    ((com.example.vax.pickingratecalculator.CustomEditText) view).setSelection(((com.example.vax.pickingratecalculator.CustomEditText) view).getText().length());
                 }
 
 
-                if (((EditText) view).getTag().toString().matches("h.")) {
-                    if (((EditText) view).getText().length() == 1) {
+                if (((com.example.vax.pickingratecalculator.CustomEditText) view).getTag().toString().matches("h.")) {
+                    if (((com.example.vax.pickingratecalculator.CustomEditText) view).getText().length() == 1) {
                         //Log.i("xxxx","df");
                         view.focusSearch(View.FOCUS_RIGHT).requestFocus();
                     }
                 }
-                if (((EditText) view).getTag().toString().matches("m.")) {
-                    if (((EditText) view).getText().length() == 2) {
+                if (((com.example.vax.pickingratecalculator.CustomEditText) view).getTag().toString().matches("m.")) {
+                    if (((com.example.vax.pickingratecalculator.CustomEditText) view).getText().length() == 2) {
                         view.focusSearch(View.FOCUS_RIGHT).requestFocus();
                     }
                 }
-                if (((EditText) view).getTag().toString().matches("s.")) {
-                    if (((EditText) view).getText().length() == 2) {
+                if (((com.example.vax.pickingratecalculator.CustomEditText) view).getTag().toString().matches("s.")) {
+                    if (((com.example.vax.pickingratecalculator.CustomEditText) view).getText().length() == 2) {
                         view.focusSearch(View.FOCUS_RIGHT).requestFocus();
                     }
                 }
-            }else{if (((EditText) view).getText().length() == 0) {
+            }else{if (((com.example.vax.pickingratecalculator.CustomEditText) view).getText().length() == 0) {
                 try {
                     view.focusSearch(View.FOCUS_LEFT).requestFocus();
-                    ((EditText) view).setSelection(((EditText) view).getText().length());
+                    ((com.example.vax.pickingratecalculator.CustomEditText) view).setSelection(((com.example.vax.pickingratecalculator.CustomEditText) view).getText().length());
                 } catch (Exception e){
 
                 }
@@ -236,8 +238,8 @@ public class MainActivity extends AppCompatActivity {
     {
         for (int i = 0, count = group.getChildCount(); i < count; ++i) {
             View view = group.getChildAt(i);
-            if (view instanceof EditText) {
-                ((EditText)view).setText("");
+            if (view instanceof com.example.vax.pickingratecalculator.CustomEditText) {
+                ((com.example.vax.pickingratecalculator.CustomEditText)view).setText("");
             }
 
             if(view instanceof ViewGroup && (((ViewGroup)view).getChildCount() > 0))
@@ -256,35 +258,66 @@ public class MainActivity extends AppCompatActivity {
     public void onFocusChange(View v, boolean hasFocus){
     }
 
+    /*public class CustomEditText extends EditText {
+
+        public CustomEditText(Context context, AttributeSet attrs) {
+            super(context, attrs);
+
+        }
+        public CustomEditText(Context context) {
+            super(context);
+
+        }
+
+        public CustomEditText(Context context, AttributeSet attrs, int defStyle) {
+            super(context, attrs, defStyle);
+
+        }
+
+        @Override
+        public void onSelectionChanged(int start, int end) {
+
+            CharSequence text = getText();
+            if (text != null) {
+                if (start != text.length() || end != text.length()) {
+                    setSelection(text.length(), text.length());
+                    return;
+                }
+            }
+
+            super.onSelectionChanged(start, end);
+        }
+
+    }*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fields.add(logon1 = (EditText) findViewById(R.id.h1));
-        fields.add(logon2 = (EditText) findViewById(R.id.h2));
-        fields.add(logon3 = (EditText) findViewById(R.id.h3));
-        fields.add(logon4 = (EditText) findViewById(R.id.h4));
-        fields.add(logon5 = (EditText) findViewById(R.id.h5));
-        fields.add(logon6 = (EditText) findViewById(R.id.h6));
-        fields.add(pick1 = (EditText) findViewById(R.id.pick1));
-        fields.add(pick2 = (EditText)findViewById(R.id.pick2));
-        fields.add(pick3 = (EditText)findViewById(R.id.pick3));
-        fields.add(pick4 = (EditText)findViewById(R.id.pick4));
-        fields.add(pick5 = (EditText)findViewById(R.id.pick5));
-        fields.add(pick6 = (EditText)findViewById(R.id.pick6));
+        fields.add(logon1 = (com.example.vax.pickingratecalculator.CustomEditText) findViewById(R.id.h1));
+        fields.add(logon2 = (com.example.vax.pickingratecalculator.CustomEditText) findViewById(R.id.h2));
+        fields.add(logon3 = (com.example.vax.pickingratecalculator.CustomEditText) findViewById(R.id.h3));
+        fields.add(logon4 = (com.example.vax.pickingratecalculator.CustomEditText) findViewById(R.id.h4));
+        fields.add(logon5 = (com.example.vax.pickingratecalculator.CustomEditText) findViewById(R.id.h5));
+        fields.add(logon6 = (com.example.vax.pickingratecalculator.CustomEditText) findViewById(R.id.h6));
+        fields.add(pick1 = (com.example.vax.pickingratecalculator.CustomEditText) findViewById(R.id.pick1));
+        fields.add(pick2 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.pick2));
+        fields.add(pick3 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.pick3));
+        fields.add(pick4 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.pick4));
+        fields.add(pick5 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.pick5));
+        fields.add(pick6 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.pick6));
 
-        fields.add(mins1 = (EditText)findViewById(R.id.m1));
-        fields.add(mins2 = (EditText)findViewById(R.id.m2));
-        fields.add(mins3 = (EditText)findViewById(R.id.m3));
-        fields.add(mins4 = (EditText)findViewById(R.id.m4));
-        fields.add(mins5 = (EditText)findViewById(R.id.m5));
-        fields.add(mins6 = (EditText)findViewById(R.id.m6));
-        fields.add(s1 = (EditText)findViewById(R.id.s1));
-        fields.add(s2 = (EditText)findViewById(R.id.s2));
-        fields.add(s3 = (EditText)findViewById(R.id.s3));
-        fields.add(s4 = (EditText)findViewById(R.id.s4));
-        fields.add(s5 = (EditText)findViewById(R.id.s5));
-        fields.add(s6 = (EditText)findViewById(R.id.s6));
+        fields.add(mins1 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.m1));
+        fields.add(mins2 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.m2));
+        fields.add(mins3 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.m3));
+        fields.add(mins4 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.m4));
+        fields.add(mins5 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.m5));
+        fields.add(mins6 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.m6));
+        fields.add(s1 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.s1));
+        fields.add(s2 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.s2));
+        fields.add(s3 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.s3));
+        fields.add(s4 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.s4));
+        fields.add(s5 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.s5));
+        fields.add(s6 = (com.example.vax.pickingratecalculator.CustomEditText)findViewById(R.id.s6));
         spinner1 = (Spinner)findViewById(R.id.spinner1);
         spinner2 = (Spinner)findViewById(R.id.spinner2);
         spinner3 = (Spinner)findViewById(R.id.spinner3);

@@ -403,7 +403,7 @@
                 android:layout_marginLeft="5dp"
                 android:textSize="18dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="h1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -431,7 +431,7 @@
                 android:layout_gravity="center_vertical"
                 android:textStyle="bold" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="m1"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -459,7 +459,7 @@
                 android:textStyle="bold" />
 
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="s1"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -475,7 +475,7 @@
 
                 android:textSize="20dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="p1"
                 android:layout_width="90dp"
                 android:layout_height="30dp"
@@ -533,7 +533,7 @@
                 android:layout_marginLeft="5dp"
                 android:textSize="18dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="h2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -560,7 +560,7 @@
                 android:layout_gravity="center_vertical"
                 android:textStyle="bold" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="m2"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -587,7 +587,7 @@
                 android:textStyle="bold" />
 
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="s2"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -602,7 +602,7 @@
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="p2"
                 android:layout_width="90dp"
                 android:layout_height="30dp"
@@ -656,7 +656,7 @@
                 android:layout_marginLeft="5dp"
                 android:textSize="18dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="h3"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -683,7 +683,7 @@
                 android:layout_gravity="center_vertical"
                 android:textStyle="bold" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="m3"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -710,7 +710,7 @@
                 android:textStyle="bold" />
 
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="s3"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -725,7 +725,7 @@
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="p3"
                 android:layout_width="90dp"
                 android:layout_height="30dp"
@@ -778,7 +778,7 @@
                 android:layout_marginLeft="5dp"
                 android:textSize="18dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="h4"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -805,7 +805,7 @@
                 android:layout_gravity="center_vertical"
                 android:textStyle="bold" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="m4"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -832,7 +832,7 @@
                 android:textStyle="bold" />
 
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="s4"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -847,7 +847,7 @@
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="p4"
                 android:layout_width="90dp"
                 android:layout_height="30dp"
@@ -901,7 +901,7 @@
                 android:layout_marginLeft="5dp"
                 android:textSize="18dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="h5"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -928,7 +928,7 @@
                 android:layout_gravity="center_vertical"
                 android:textStyle="bold" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="m5"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -955,7 +955,7 @@
                 android:textStyle="bold" />
 
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="s5"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -970,7 +970,7 @@
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="p5"
                 android:layout_width="90dp"
                 android:layout_height="30dp"
@@ -1024,7 +1024,7 @@
                 android:layout_marginLeft="5dp"
                 android:textSize="18dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="h6"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -1051,7 +1051,7 @@
                 android:layout_gravity="center_vertical"
                 android:textStyle="bold" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="m6"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -1078,7 +1078,7 @@
                 android:textStyle="bold" />
 
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="s6"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -1093,7 +1093,7 @@
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
-            <EditText
+            <com.example.vax.pickingratecalculator.CustomEditText
                 android:tag="p6"
                 android:layout_width="90dp"
                 android:layout_height="30dp"
